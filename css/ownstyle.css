@@ -1,0 +1,46 @@
+*{
+	border:0;
+	margin:0;
+	padding:0;
+	box-sizing: 0;
+}
+/*smarth phones view*/
+@media only screen and (max-width:1080px){
+	.nav-bar{
+		display:none;
+	}
+	.nav-bar-smart{
+		position: sticky;
+		top:0px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 10px;
+		grid-auto-rows: auto;
+	}
+	.logo{
+		grid-column: 1/4;
+		grid-row: 1;
+	}
+	.logo img{
+			width:300px;
+			height:300px;
+	}
+	li{
+		list-style: none;
+	}
+	a{
+		text-decoration: none:
+	}
+}
+.fa-whatsapp{
+	font-size: 100px;
+	color:#00aa00;
+}
+.fa-paper-plane{
+	font-size: 100px;
+	color:#afdde9ff;
+}
+.fa-headset{
+	font-size: 100px;
+	color:#000035;
+}
