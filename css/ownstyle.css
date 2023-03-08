@@ -6,11 +6,23 @@
 }
 body{
 	background: url("../img/fondo1.jpg");
+	width:100%;
 }
+/*Fuente para titulos o encabezados*/
 @font-face{
 	font-family: "Chocolate otf";
-	src:url("../fonts/Chocolate otf.otf");
+	src: url("../fonts/Chocolate otf.otf");
 
+}
+/*fuente para parrafos o descripciones*/
+@font-face{
+	font-family: "Comfortaa-Regular";
+	src: url("../fonts/Comfortaa-Regular.ttf");
+}
+/*Fuente para promociones/enlaces/llama a la acción*/
+@font-face{
+	font-family: "coolvetica rg";
+	src: url("../fonts/coolvetica rg.otf");
 }
 /*smarth phones*/
 @media only screen and (max-width:850px){
@@ -19,13 +31,13 @@ body{
 	}
 	header{
 		position:sticky;
-		top:-160px;
+		top:-150px;
 	}
 	.nav-bar-smart{
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		grid-gap: 20px;
-		grid-auto-rows: auto;
+		grid-row: minmax(100px,200px);
 		padding: 5px;
 		background-color:#afdde9ff;
 		align-self: start:
@@ -42,7 +54,7 @@ body{
 	.menu{
 		display:grid;
 		grid-template-columns: repeat(3,1fr);
-		grid-column-gap: 30px;
+		grid-column-gap: 20px;
 	}
 
 	.active{
@@ -67,32 +79,29 @@ body{
 
 	/*Contenedor smartphones*/
 	.container{
-		width:90%;
-		margin:auto;
 		margin-top: 20px;
 		padding:20px;
-		box-shadow: 10px 5px 5px  #F1F0EF;
 	}
 	.intro{
 		text-align:justify;
 		font-size: 16px;
 		padding: 10px;
-		background-color: #ffffff;
+		background-color: #fff9;
 	}
-	.intro h1{
+	h1, h2, h3{
 		font-family: "Chocolate otf";
-		margin-bottom: 20px;
+		margin-top: 20px;
 		text-align: center;
 	}
-	.intro p{
-		font-family:"´Popsicle";
+	p{
+		font-family:"Comfortaa-Regular";
 	}
 	.servicios{
 		display: flex;
 		flex-wrap:wrap;
 		justify-content: center;
-		margin:30px 0px 30px 0px;
-		background-color: #ffffff;
+		margin:30px 0px 20px 0px;
+		background-color: #fff8;
 	}
 	.enfermeras_aux img, .enfermeras_grals img, .coloca_suero img, .curaciones img{
 		border-radius: 50%;
@@ -103,6 +112,7 @@ body{
 		padding:20px;
 	}
 	figcaption, cite{
+		font-family:"Comfortaa-Regular";
 		text-align: justify;
 	}
 
@@ -111,6 +121,7 @@ body{
 a{
 	text-decoration: none;
 	color: #00002bff;
+	font-family:"coolvetica rg";
 }
 .fa-whatsapp{
 	font-size: 45px;
