@@ -4,6 +4,14 @@
 	padding:0;
 	box-sizing: 0;
 }
+body{
+	background: url("../img/fondo1.jpg");
+}
+@font-face{
+	font-family: "Chocolate otf";
+	src:url("../fonts/Chocolate otf.otf");
+
+}
 /*smarth phones*/
 @media only screen and (max-width:850px){
 	.nav-bar{
@@ -11,7 +19,7 @@
 	}
 	header{
 		position:sticky;
-		top:-152px;
+		top:-160px;
 	}
 	.nav-bar-smart{
 		display: grid;
@@ -67,15 +75,24 @@
 	}
 	.intro{
 		text-align:justify;
-		font-style: oblique;
 		font-size: 16px;
 		padding: 10px;
+		background-color: #ffffff;
+	}
+	.intro h1{
+		font-family: "Chocolate otf";
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.intro p{
+		font-family:"´Popsicle";
 	}
 	.servicios{
 		display: flex;
 		flex-wrap:wrap;
 		justify-content: center;
 		margin:30px 0px 30px 0px;
+		background-color: #ffffff;
 	}
 	.enfermeras_aux img, .enfermeras_grals img, .coloca_suero img, .curaciones img{
 		border-radius: 50%;
