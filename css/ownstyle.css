@@ -80,7 +80,7 @@ body{
 	/*Contenedor smartphones*/
 	.container{
 		margin-top: 20px;
-		padding:20px;
+		
 	}
 	.intro{
 		text-align:justify;
@@ -97,10 +97,12 @@ body{
 		font-family:"Comfortaa-Regular";
 	}
 	.servicios{
+		width:90%;
+		margin: 10px auto ;
 		display: flex;
 		flex-wrap:wrap;
 		justify-content: center;
-		margin:30px 0px 20px 0px;
+		/*margin:30px 0px 20px 0px;*/
 		background-color: #fff8;
 	}
 	.enfermeras_aux img, .enfermeras_grals img, .coloca_suero img, .curaciones img{
@@ -114,12 +116,23 @@ body{
 	figcaption, cite{
 		font-family:"Comfortaa-Regular";
 		text-align: justify;
+		margin-top:10px;
 	}
-	.enfermeras_aux, .enfermeras_grals{
+	.enfermeras_aux{
+		animation-name:fadein;
+		animation-duration: 3s;
+	} 
+	.enfermeras_grals{
+		
 		animation-name: slidein ;
 		animation-duration: 3s;
-		animation-delay: max(1000, 2000);
+		animation-delay: 9s;
 
+	}
+	@keyframes fadein{
+		from{
+			margin-left:-300px;}
+		to{margin-left:0px;}
 	}
 	@keyframes slidein{
 		from{
@@ -130,6 +143,20 @@ body{
 			margin-left: 0%;
 			width:100%;
 		}
+	}
+
+	/*Contacto smart*/
+	.contacto{
+		display:grid;
+		grid-template-columns: repeat(3,1fr);
+		text-align: center;
+		background-color: #fff8;
+
+	}
+	.wapp, .correo, .callus{
+		display: flex;
+		flex-wrap: wrap ;
+		text-align: center;
 	}
 
 }
@@ -144,10 +171,10 @@ a{
 	color:#00aa00;
 }
 .fa-paper-plane{
-	font-size: 30px;
+	font-size: 45px;
 	color:#afdde9ff;
 }
 .fa-headset{
-	font-size: 20px;
+	font-size: 45px;
 	color:#000035;
 }
