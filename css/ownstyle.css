@@ -249,7 +249,7 @@ body{
 		display:grid;
 		grid-template-columns:repeat(1,1fr);	
 	}
-	p{
+	footer p{
 		grid-column: 1/4;
 		text-align: center;
 		padding-top: 50px;
