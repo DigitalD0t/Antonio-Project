@@ -214,6 +214,14 @@ body{
 		display:grid;
 		grid-template-columns:repeat(1,1fr);
 	}
+	.sitemap{
+	  display:grid;
+	  grid-template-columns: repeat(1,1fr);
+	 }
+	 .conubi{
+	 display:grid;
+	 grid-template-columns: repeat(1,1fr);
+	 }
 	p{
 		grid-column: 1/4;
 		text-align: center;
