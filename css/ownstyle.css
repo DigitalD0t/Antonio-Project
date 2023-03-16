@@ -235,7 +235,40 @@ body{
 	.despues img{
 		width:100%;
 	}
-
+	.aviso{
+		width: 100vw;
+		height: 100vh;
+		background-color:rgba(00,00,53,.8);
+		position:absolute;
+		top:0px;
+	}
+	.fa-times{
+		position:absolute;
+		top:20px;
+		right:20px;
+	}
+	.message{
+		display:grid;
+		grid-template-columns: repeat(1,1fr);
+		grid-gap:20px;
+		font-size: 20px;
+		color:#fff;
+		padding:20px;
+		background-color:#000;
+		width:80%;
+		height:500px;
+		margin:auto;
+		margin-top:210px;
+		text-align: justify;
+	}
+	.aceptar{
+		width:100px;
+		height:50px;
+		background-color:rgb(180,250,250);
+		font-size:18px;
+		position:relative;
+		left:115px;
+	}
 
 	
 	/*Termina albumn de evidencia*/
