@@ -330,9 +330,9 @@ body{
 		font-size:12px;
 	}
 
-}
 
-a{
+
+	a{
 	text-decoration: none;
 	color: #00002bff;
 	font-family:"coolvetica rg";
@@ -354,6 +354,29 @@ li{
 	margin-top:5px;
 	list-style-type: none;
 }
+
+}
+
+/*Computadoras/ lap tops*/
+@media only screen and (max-width:2040px){
+	.nav-bar-smart{
+		display:none;
+	}
+	.nav-bar{
+		display:grid;
+		grid-template-columns:repeat(2,1fr);
+		background-color:#afdde9ff;
+	}
+	.logo{
+		width:200px;
+	}
+	.nav-bar li{
+		display:inline;
+		justify-content: start;
+
+	}
+}
+
 
 
 
