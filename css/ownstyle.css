@@ -201,9 +201,11 @@ body{
 	}
 	.evi0{
 		display:grid;
-		grid-template-columns: repeat(3,1fr);
+		grid-template-columns: repeat(2,1fr);
 		grid-gap:5px;
 	}
+	
+
 	.inter{
 		display:grid;
 		grid-template-columns:repeat(1,1fr);
@@ -212,7 +214,7 @@ body{
 	}
 	.evi1{
 		display:grid;
-		grid-template-columns:repeat(3,1fr);
+		grid-template-columns:repeat(2,1fr);
 		grid-gap:5px;
 	}
 	.despues{
@@ -221,9 +223,10 @@ body{
 		grid-row: minmax(500px, 800px);
 		grid-gap:5px;
 	}
+
 	.evi2{
 		display:grid;
-		grid-template-columns:repeat(3,1fr);
+		grid-template-columns:repeat(2,1fr);
 		grid-gap:5px;
 	}
 	.antes img{
@@ -237,8 +240,8 @@ body{
 	}
 	.aviso{
 		width: 100vw;
-		height: 100vh;
-		background-color:rgba(00,00,53,.8);
+		height: 350vh;
+		background: linear-gradient(to top, #7f7fd5, #86a8e7, #91eae477); 
 		position:absolute;
 		top:0px;
 	}
@@ -322,6 +325,9 @@ body{
 		text-align: center;
 		padding-top: 50px;
 		font-size: 10px;
+	}
+	footer a{
+		font-size:12px;
 	}
 
 }
