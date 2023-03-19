@@ -125,18 +125,9 @@ body{
 		/*margin:30px 0px 20px 0px;*/
 		background-color: #fff8;
 	}
-	.servicios img:nth-child(n){
-		border-radius: 50%;
-
-	}
 	.servicios div:nth-child(n){
-		text-align: center;
-		padding:20px;
-	}
-	figcaption, cite{
-		font-family:"Comfortaa-Regular";
 		text-align: justify;
-		margin-top:10px;
+		padding:20px;
 	}
 	/*.enfermeras_aux{
 		animation-name:fadein;
@@ -210,6 +201,53 @@ body{
 		grid-template-columns: repeat(3,1fr);
 	}
 	/*end index container*/
+	/*About us Container*/
+	.aboutus{
+		background-color: #fff8;
+		width:90%;
+		margin:auto;
+		border-radius:20px;
+		padding:10px;
+	}
+	.team{
+		width:100%;
+		background-color:#fff8;
+	}
+	.team img:nth-child(n){
+		border-radius: 50%;
+
+	}
+	.team  div:nth-child(n){
+		text-align: center;
+		padding:20px;
+	}
+	figcaption, cite{
+		font-family:"Comfortaa-Regular";
+		text-align: justify;
+		margin-top:10px;
+	}
+	.mision{
+		background-color: #fff8;
+		width:90%;
+		margin:auto;
+		border-radius:20px;
+		padding:10px;	
+	}
+	.vision{
+		background-color: #fff8;
+		width:90%;
+		margin:auto;
+		border-radius:20px;
+		padding:10px;
+	}
+	.fun{
+		background-color: #fff8;
+		width:90%;
+		margin:auto;
+		border-radius:20px;
+		padding:10px;
+	}
+/*End About us container*/ 
 	/*Álbumn de Evidencia*/
 	.album{
 		width:100%;
@@ -300,36 +338,7 @@ body{
 	
 	/*Termina albumn de evidencia*/
 	
-/*About us Container*/
-	.aboutus{
-		background-color: #fff8;
-		width:90%;
-		margin:auto;
-		border-radius:20px;
-		padding:10px;
-	}
-	.mision{
-		background-color: #fff8;
-		width:90%;
-		margin:auto;
-		border-radius:20px;
-		padding:10px;	
-	}
-	.vision{
-		background-color: #fff8;
-		width:90%;
-		margin:auto;
-		border-radius:20px;
-		padding:10px;
-	}
-	.fun{
-		background-color: #fff8;
-		width:90%;
-		margin:auto;
-		border-radius:20px;
-		padding:10px;
-	}
-/*End About us container*/ 
+
 	footer{
 		display: grid;
 		grid-template-columns:repeat(3, 1fr);
