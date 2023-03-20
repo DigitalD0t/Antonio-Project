@@ -109,13 +109,20 @@ body{
 		padding: 10px;
 		background-color: #fff8;
 	}
-	h1, h2, h3{
+	h1, h2{
 		font-family: "Chocolate otf";
 		margin-top: 20px;
 		text-align: center;
 	}
-	p{
+	h3{
+		font-family: colvetica rg;
+		padding: 20px;
+		text-align: center;
+	}
+	p, span{
 		font-family:"Comfortaa-Regular";
+		font-size:18px;
+		text-align: justify;
 	}
 	.servicios{
 		width:90%;
@@ -126,10 +133,21 @@ body{
 		/*margin:30px 0px 20px 0px;*/
 		background-color: #fff8;
 	}
-	.servicios div:nth-child(n){
+	.servicio:nth-child(n){
 		text-align: justify;
+		width:100%;
 		padding:20px;
-	}	
+		border-bottom:solid 1px #0005;
+	}
+	.servicio ul{
+		display:grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap:10px;
+		text-align: center	;
+	}
+	.servicio li:nth-child(5){
+		grid-column:1/3;
+	}
 	/*Contacto*/
 	.contact-desk{
 		display:grid;
@@ -243,8 +261,6 @@ body{
 		grid-template-columns: repeat(2,1fr);
 		grid-gap:5px;
 	}
-	
-
 	.inter{
 		display:grid;
 		grid-template-columns:repeat(1,1fr);
@@ -268,9 +284,9 @@ body{
 	}
 	.aviso{
 		width: 100vw;
-		height: 600vh;
-		background: linear-gradient(to top, #7f7fd5, #86a8e7, #91eae477); 
-		position:absolute;
+		height: 100vh;
+		background: linear-gradient(to top, #7f7fd5, #86a8e7, #91eae455); 
+		position:fixed;
 		top:0px;
 	}
 	.fa-times{
@@ -289,16 +305,15 @@ body{
 		width:80%;
 		height:500px;
 		margin:auto;
-		margin-top:210px;
+		margin-top:180px;
 		text-align: justify;
 	}
 	.aceptar{
-		width:100px;
+		width:200px;
 		height:50px;
 		background-color:rgb(180,250,250);
 		font-size:18px;
-		position:relative;
-		left:115px;
+		margin:auto;
 	}
 
 	
@@ -364,6 +379,7 @@ body{
 	.active{
 		color:#848383;
 		cursor: not-allowed;
+
 	}
 	/*General Header*/
 	.nav-bar{
@@ -400,11 +416,12 @@ body{
 	h3{
 		font-family: colvetica rg;
 		padding: 20px;
-
+		text-align: center;
 	}
-	p{
+	p, span{
 		font-family:"Comfortaa-Regular";
 		font-size:18px;
+		text-align: justify;
 	}
 	
 	a{
@@ -412,6 +429,7 @@ body{
 		color: #00002bff;
 		font-family:"coolvetica rg";
 		font-size:18px;
+		transition: all 0.5s ease-out;
 	}
 	.intro{
 		width:100%;
@@ -436,6 +454,7 @@ body{
 		padding:10px;
 		margin-left: 10px;
 		border-radius:10px;
+		transition: all 0.5s ease-out;
 	}
 	.intro a:hover{
 		background-color:rgba(250,250,250,.5);
@@ -460,25 +479,26 @@ body{
 		margin:auto;
 		padding:30px;
 	}
-	.servicios div:nth-child(n){
+	.servicio:nth-child(n){
 		background-color:#fff6;
 		border-radius:10px;
 		padding:20px;
 		box-shadow: 5px 5px 10px 5px;
+		list-style-type: none;
 	}
 	.servicios h1, .test h1{
 		grid-column: 1/3;
 	}
-	.servicios:nth-child(2n){
+	.servicio:nth-child(2n){
 		text-align: center;
 	}
-	.servicios ul{
+	.servicio ul{
 		display:grid;
 		grid-template-columns: repeat(3,1fr);
 		grid-gap:10px;
 		align-items: center;
 	}
-	.servicios li{
+	.servicio li{
 		list-style-type: none;
 		display:inline;
 		text-align: center;
@@ -496,6 +516,7 @@ body{
 	}
 	.contact-phone a:nth-child(n){
 		font-size: 2em;
+
 	}
 	.ubicacion{
 		width:100%;
@@ -579,12 +600,14 @@ body{
 	/*iconos y enlaces configuración*/
 	.fa-whatsapp{
 		color:#00aa00;
+		transition: all 0.5s ease-out;
 	}
 	.contact-phone a .fa-whatsapp:hover{
 		color:#fff;
 	}
 	.fa-paper-plane{
 		color:#afdde9ff;
+		transition: all 0.5s ease-out;
 	}
 	.contact-phone a .fa-paper-plane:hover{
 		color:#fff;	
@@ -592,49 +615,87 @@ body{
 	.contact-phone a .fa-phone-alt:hover{
 		color:#fff;	
 	}
-	.fa-headset{
+	.fa-phone-alt{
 		color:rgb(00,00,53);
+		transition: all 0.5s ease-out;
 	}
 	/*end Icons*/
 	/*Álbumn de evidencia escritorio*/
 	.album{
-		width:100%;
+		width:90vw;
+		margin :auto;
 		display:grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 20px;
 		
 	}
+	
 	.evi0{
 		display:grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap:10px;
 	}
-	.antev0:nth-child(5){
-		position: relative ;
-		bottom:450px;
+	.antev:nth-child(5){
+		position: absolute ;
+		bottom:160px;
 		left:120px;
 		width:200px;
 	}
-	.antev0 img{
-		object-fit: cover;
-		border-radius: 30%;
+	.evidencia{
+		height:150px;
+		object-fit: fill;
+		border-radius:10px;
 	}
-	.evi1{
-		animation-name: inter;
-		animation-duration: 5s;
-		animation-iteration-count: infinite;
-		width: 100%;
+	.durinev:nth-child(n+3){
+		grid-column: 1;
+	}
+	.durinev:nth-child(5){
+		grid-column: 2;
+	}
+	.durinev:nth-child(3){
+		grid-column: 1/3;
+	}
+	.durinev:nth-child(2){
+		grid-row-end: span 2;
+	}
+	.despevi:nth-child(5){
+		grid-column:1/3;
+	}
+	.aviso{
+		width:96vw;
+		height:99vh;
+		margin: auto;
+		padding:20px;
+		background: linear-gradient(to bottom, #7f7fd9, #86a8e8, #91eae4); 
+		position:fixed;
+		top:0px;
+	}
+	.message{
+		display:grid;
+		grid-template-columns: repeat(1,1fr);
+		grid-gap:20px;
+		font-size: 20px;
+		color:#fff;
+		padding:20px;
+		background-color:#000;
+		width:80%;
 		height:500px;
+		margin:30px auto;
+		text-align: justify;
 	}
-	
-	@keyframes inter{
-		20%{background-image:url(../img/pie_inter1.jpeg);background-size: cover;object-fit: cover;}
-		40%{background-image: url(../img/pie_inter2.jpeg);background-size: cover;object-fit: cover;}
-		60%{background-image: url(../img/pie_inter3.jpeg);background-size: cover;object-fit: cover;}
-		80%{background-image: url(../img/pie_inter4.jpeg);background-size: cover;object-fit: cover;}
-		100%{background-image: url(../img/pie_inter5.jpeg);background-size: cover;object-fit: cover;}
-		
+	.aceptar{
+		width:200px;
+		height:50px;
+		background-color:rgb(180,250,250);
+		font-size:18px;
+		margin:auto;
 	}
+	.aviso p, .aviso h3{
+		font-size:30px;
+		margin-top:30px;
+	}
+
+
 	/*End Álbumn*
 /*----------------------------------------------------------------*/
 	/*General page footer*/
