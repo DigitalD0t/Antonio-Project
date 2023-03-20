@@ -76,7 +76,8 @@ body{
 		color:#00002bff;
 		font-size: 1.5em;
 	}
-
+	/*End Header*/
+/*----------------------------------------------------------------*/
 	/*Contenedor smartphones*/
 	/*general container*/
 	.container{
@@ -128,33 +129,7 @@ body{
 	.servicios div:nth-child(n){
 		text-align: justify;
 		padding:20px;
-	}
-	/*.enfermeras_aux{
-		animation-name:fadein;
-		animation-duration: 3s;
-	} 
-	.enfermeras_grals{
-		
-		animation-name: slidein ;
-		animation-duration: 3s;
-		animation-delay: 9s;
-
-	}
-	@keyframes fadein{
-		from{margin-left:-300px;}
-		to{margin-left:0px;}
-	}
-	@keyframes slidein{
-		from{
-			margin-left: 130%;
-			width:100%;
-		}
-		to{
-			margin-left: 0%;
-			width:100%;
-		}
-	}*/
-
+	}	
 	/*Contacto*/
 	.contact-desk{
 		display:grid;
@@ -201,6 +176,7 @@ body{
 		grid-template-columns: repeat(3,1fr);
 	}
 	/*end index container*/
+/*----------------------------------------------------------------*/
 	/*About us Container*/
 	.aboutus{
 		background-color: #fff8;
@@ -247,7 +223,8 @@ body{
 		border-radius:20px;
 		padding:10px;
 	}
-/*End About us container*/ 
+	/*End About us container*/ 
+/*----------------------------------------------------------------*/
 	/*Álbumn de Evidencia*/
 	.album{
 		width:100%;
@@ -274,21 +251,10 @@ body{
 		grid-row: minmax(500px, 800px);
 		padding:5px;
 	}
-	.evi1{
-		display:grid;
-		grid-template-columns:repeat(2,1fr);
-		grid-gap:5px;
-	}
 	.despues{
 		display:grid;
 		grid-template-columns:repeat(1,1fr);
 		grid-row: minmax(500px, 800px);
-		grid-gap:5px;
-	}
-
-	.evi2{
-		display:grid;
-		grid-template-columns:repeat(2,1fr);
 		grid-gap:5px;
 	}
 	.antes img{
@@ -302,7 +268,7 @@ body{
 	}
 	.aviso{
 		width: 100vw;
-		height: 350vh;
+		height: 600vh;
 		background: linear-gradient(to top, #7f7fd5, #86a8e7, #91eae477); 
 		position:absolute;
 		top:0px;
@@ -337,8 +303,8 @@ body{
 
 	
 	/*Termina albumn de evidencia*/
-	
-
+/*----------------------------------------------------------------*/
+	/*Footer smartphones*/
 	footer{
 		display: grid;
 		grid-template-columns:repeat(3, 1fr);
@@ -390,13 +356,14 @@ body{
 
 }
 
-/*Computadoras/ lap tops*/
+/*escritorio / lap tops*/
 @media only screen and (min-width:851px){
 	.desk, .contact-desk{
 		display:none;
 	}
 	.active{
 		color:#848383;
+		cursor: not-allowed;
 	}
 	/*General Header*/
 	.nav-bar{
@@ -417,8 +384,13 @@ body{
 		text-align: center;
 
 	}
+	.nav-bar a:hover{
+		color:#848383;
+	}
 	
 	/*End General Header*/
+/*----------------------------------------------------------------*/
+	/*start Index*/
 	h1, h2{
 		font-family: "Chocolate otf";
 		padding:20px;
@@ -519,9 +491,6 @@ body{
 		grid-template-columns: repeat(3,1fr);
 		align-items: center;
 	}
-	.team img{
-		border-radius: 50%;
-	}
 	.contact-phone div:nth-child(n){
 		text-align: center;
 	}
@@ -545,8 +514,9 @@ body{
 	.test img{
 		border-radius:50%;
 	}
-
-/*About Us escritorio*/
+	/*End index escritorio*/
+/*----------------------------------------------------------------*/
+	/*About Us escritorio*/
 	.aboutus{
 		background-color: #fff8;
 		text-align: justify;
@@ -556,7 +526,7 @@ body{
 		display:grid;
 		grid-template-columns: repeat(2, 1fr);
 		width:80%;
-		margin: auto;
+		margin: 40px auto;
 		background-color: #fff8;
 		padding:40px;
 	}
@@ -568,21 +538,105 @@ body{
 		margin:auto;
 		text-align: center;
 	}
+	.team img{
+		border-radius: 50%;
+	}
 	figcaption, cite{
 		font-family:"Comfortaa-Regular";
 		text-align: justify;
 		margin-top:10px;
 	}
+	.mision{
+		width:70%;
+		background-color:#fff8;
+		margin:50px auto;
+		padding:40px;
+	}
+	.vision{
+		width:70%;
+		background-color:#fff8;
+		margin:50px auto;
+		padding:40px;
+	}
+	.fun{
+		width:70%;
+		background-color:#fff8;
+		margin:50px auto;
+		padding:40px;
+	}
+	.fun ul{
+		display:grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 30px;
+		text-align: center;
+	}
+	.fun li{
+		list-style-type: none;
+		display:inline;
+	}
+	/*End About US*/
+/*----------------------------------------------------------------*/
+	/*iconos y enlaces configuración*/
 	.fa-whatsapp{
 		color:#00aa00;
+	}
+	.contact-phone a .fa-whatsapp:hover{
+		color:#fff;
 	}
 	.fa-paper-plane{
 		color:#afdde9ff;
 	}
+	.contact-phone a .fa-paper-plane:hover{
+		color:#fff;	
+	}
+	.contact-phone a .fa-phone-alt:hover{
+		color:#fff;	
+	}
 	.fa-headset{
 		color:rgb(00,00,53);
 	}
-
+	/*end Icons*/
+	/*Álbumn de evidencia escritorio*/
+	.album{
+		width:100%;
+		display:grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 20px;
+		
+	}
+	.evi0{
+		display:grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap:10px;
+	}
+	.antev0:nth-child(5){
+		position: relative ;
+		bottom:450px;
+		left:120px;
+		width:200px;
+	}
+	.antev0 img{
+		object-fit: cover;
+		border-radius: 30%;
+	}
+	.evi1{
+		animation-name: inter;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		width: 100%;
+		height:500px;
+	}
+	
+	@keyframes inter{
+		20%{background-image:url(../img/pie_inter1.jpeg);background-size: cover;object-fit: cover;}
+		40%{background-image: url(../img/pie_inter2.jpeg);background-size: cover;object-fit: cover;}
+		60%{background-image: url(../img/pie_inter3.jpeg);background-size: cover;object-fit: cover;}
+		80%{background-image: url(../img/pie_inter4.jpeg);background-size: cover;object-fit: cover;}
+		100%{background-image: url(../img/pie_inter5.jpeg);background-size: cover;object-fit: cover;}
+		
+	}
+	/*End Álbumn*
+/*----------------------------------------------------------------*/
 	/*General page footer*/
 	footer{
 		display:grid;
