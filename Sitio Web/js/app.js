@@ -12,3 +12,32 @@ document.addEventListener('DOMContentLoaded',()=>{
     accordion:false
   });
 });
+
+function comentario(){
+  const nombre = document.querySelector(".name").value;
+  const caso = document.querySelector(".case").value;
+  const comentario = document.querySelector(".comentario").value;
+  const compartir = document.querySelector(".publicar");
+
+  compartir.addEventListener("click",function(){
+    if( nombre == ""  && caso == "" && comentario == "" ){
+      alert("Debes de rellenar los campos solicitados");
+      
+    }else{
+      const testimonio = document.querySelector(".testimonio");
+      const citeNombre = document.createElement("cite");
+      const citeCaso = document.createElement("cite");
+      const parrCom = document.createElement("p");
+
+      citeNombre.appendChild(nombre);
+      citeCaso.appendChild(caso);
+      parrCom.appendChild(comentario);
+
+      testimonio.appendChild(citeNombre);
+      testimonio.appendChild(citeCaso);
+      testimonio.appendChild(parrCom);
+    }
+   });
+}
+
+comentario();

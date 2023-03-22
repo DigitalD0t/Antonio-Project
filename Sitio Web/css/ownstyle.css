@@ -486,7 +486,7 @@ body{
 		box-shadow: 5px 5px 10px 5px;
 		list-style-type: none;
 	}
-	.servicios h1, .test h1{
+	.servicios h1, .testimonios h1{
 		grid-column: 1/3;
 	}
 	.servicio:nth-child(2n){
@@ -522,18 +522,31 @@ body{
 		width:100%;
 		text-align: center;
 	}
-	.test{
+	.testimonios{
 		background-color:#fff8;
 		display:grid;
 		grid-template-columns: repeat(2,1fr);
 	}
-	.test div:nth-child(n){
+	
+	.testimonios div:nth-child(n){
 		width:70%;
 		margin: auto;
 		padding:20px;
 	}
-	.test img{
-		border-radius:50%;
+	.testimonios legend{
+		grid-column: 1/3;
+	}
+	legend{
+		border: solid 5px #FFF8;
+		padding: 30px;
+		height: 50vh;
+	}
+	form{
+		display: grid;
+		grid-template-columns: repeat(1,1fr);
+		width: 45vw;
+		margin: auto;
+		padding: 30px;
 	}
 	/*End index escritorio*/
 /*----------------------------------------------------------------*/
