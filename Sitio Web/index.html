@@ -169,12 +169,12 @@
 			  <legend>
 				<h1>Compártenos tu experiencia</h1>
 				<form>
-					<input type="text" name="name" class="name" placeholder="Nombre Sr. / Sr. + nombre">
+					<input type="text" name="nombre" class="nombre" placeholder="Nombre Sr. / Sr. + nombre" value="">
 					<label for="name">Nombre:</label>
-					<input type="text" name="case" class="case">
+					<input type="text" name="caso" class="caso" value="">
 					<label for="case">Caso:</label>
-					<textarea class="comentario">Tu comentario aquí</textarea>
-					<button  class="publicar">Compartir</button>
+					<textarea class="comentario" value="">Tu comentario aquí</textarea>
+					<button  class="publicar" onclick="commentBox();">Compartir</button>
 				</form>
 		</legend>
 		</div>
@@ -238,6 +238,35 @@
 	<script type="text/javascript" src="js/particles.min.js"></script>
 	<script src="https://kit.fontawesome.com/4553c26aec.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+	<script >
+		function commentBox(){
+			const nombre = document.getElementByClassName("nombre").value;
+			const caso = document.getElementByClassName("caso").value;
+			const comentario = document.getElementByClassName("comentario").value;
+			const testimonio = document.querySelector(".testimonio");
+
+			const nuevocomentario = document.createElement("DIV");
+			const citeNombre = document.createElement("CITE");
+		  	const citeCaso = document.createElement("CITE");
+		  	const pComent = document.createElement("P");
+			const textnombre = document.createTextNode(nombre);
+			const textcaso = document.createTextNode(caso);
+			const textcoment = document.createTextNode(comentario);
+
+			nuevocomentario.appendChild(textnombre);
+			nuevocomentario.appendChild(textcaso);
+			nuevocomentario.appendChild(textcoment);
+			nuevocomentario.setAttribute('class','comentario');
+
+			document.getElementByClassName("testimonio").appendChild(nuevocomentario);
+		  
+
+		  
+		  	document.getElementByClassName("nombre").value = "";
+		  	document.getElementByClassName("caso").value ="";
+		  	document.getElementByClassName("comentario").value="";
+		}
+	</script>
 </body>
 </html>
 

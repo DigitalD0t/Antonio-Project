@@ -32,6 +32,7 @@ body{
 	header{
 		position:sticky;
 		top:-155px;
+		z-index: 1;
 	}
 	.nav-bar-smart{
 		display: grid;
@@ -156,7 +157,7 @@ body{
 		background-color:rgba(00,00,53,.5);
 		padding:20px;
 		position:sticky;
-		bottom:0px;
+		bottom:-6vh;
 
 	}
 	.contact-phone{
