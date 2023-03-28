@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>val demo</title>
+  <style>
+  p {
+    color: blue;
+    margin: 8px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+ 
+<div id="comment-section">
+  <h3>Comments:</h3>
+  <div id="comments-container"></div>
+</div>
+
+<div>
+  <h3>Leave a comment:</h3>
+  <textarea id="comment-input"></textarea><br>
+  <button id="submit-button">Submit</button>
+</div>
+<script type="text/javascript">
+    const submitButton = document.getElementById("submit-button");
+const commentInput = document.getElementById("comment-input");
+const commentsContainer = document.getElementById("comments-container");
+
+submitButton.addEventListener("click", function() {
+  const comment = commentInput.value;
+  const commentElement = document.createElement("div");
+  commentElement.innerHTML = comment;
+  commentsContainer.appendChild(commentElement);
+  commentInput.value = "";
+});
+</script>
+ 
+</body>
+</html>

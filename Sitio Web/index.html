@@ -164,17 +164,17 @@
 		</div>
 		<div class="testimonios">
 			<h1>Testimonios</h1>
-			  <div class="testimonio">
+			  <div id="testimonio">
 			  </div>
 			  <legend>
 				<h1>Compártenos tu experiencia</h1>
-				<form>
-					<input type="text" name="nombre" class="nombre" placeholder="Nombre Sr. / Sr. + nombre" value="">
-					<label for="name">Nombre:</label>
-					<input type="text" name="caso" class="caso" value="">
-					<label for="case">Caso:</label>
-					<textarea class="comentario" value="">Tu comentario aquí</textarea>
-					<button  class="publicar" onclick="commentBox();">Compartir</button>
+				<form action="index.html" method="post">
+					<input type="text" name="nombre" id="nombre" placeholder="Nombre Sr. / Sr. + nombre">
+					<label for="nombre">Nombre:</label>
+					<input type="text" name="caso" id="caso">
+					<label for="caso">Caso:</label>
+					<textarea id="comentario-input">Tu comentario aquí</textarea>
+					<button id="submit-button">Enviar COmentario</button>
 				</form>
 		</legend>
 		</div>
@@ -239,33 +239,38 @@
 	<script src="https://kit.fontawesome.com/4553c26aec.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
 	<script >
-		function commentBox(){
-			const nombre = document.getElementByClassName("nombre").value;
-			const caso = document.getElementByClassName("caso").value;
-			const comentario = document.getElementByClassName("comentario").value;
-			const testimonio = document.querySelector(".testimonio");
+		const nombre = document.getElementById("nombre");
+		const caso = document.getElementById("caso");
+		const comentario = document.getElementById("comentario-input");
+		const testimonio = document.getElementById("testimonio")
+			
+		const publicar = document.getElementById("submit-button");
 
+		publicar.addEventListener("click", function(e){
+			e.preventDefault();
+			
+			const name = nombre.value;
+			const casso = caso.value;
+			const comment = comentario.value;
 			const nuevocomentario = document.createElement("DIV");
 			const citeNombre = document.createElement("CITE");
 		  	const citeCaso = document.createElement("CITE");
 		  	const pComent = document.createElement("P");
-			const textnombre = document.createTextNode(nombre);
-			const textcaso = document.createTextNode(caso);
-			const textcoment = document.createTextNode(comentario);
+			
+			citeNombre.innerHTML = name;
+			citeCaso.innerHTML = casso;
+			pComent.innerHTML = comment;
 
-			nuevocomentario.appendChild(textnombre);
-			nuevocomentario.appendChild(textcaso);
-			nuevocomentario.appendChild(textcoment);
-			nuevocomentario.setAttribute('class','comentario');
+			nuevocomentario.appendChild(citeNombre);
+			nuevocomentario.appendChild(citeCaso);
+			nuevocomentario.appendChild(pComent);
 
-			document.getElementByClassName("testimonio").appendChild(nuevocomentario);
-		  
+			testimonio.appendChild(nuevocomentario);
 
-		  
-		  	document.getElementByClassName("nombre").value = "";
-		  	document.getElementByClassName("caso").value ="";
-		  	document.getElementByClassName("comentario").value="";
-		}
+		  	nombre.value = "";
+		  	caso.value ="";
+		  	comentario.value="";
+		});
 	</script>
 </body>
 </html>
