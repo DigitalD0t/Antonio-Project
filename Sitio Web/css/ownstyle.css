@@ -545,12 +545,60 @@ body{
 		padding: 30px;
 		height: 50vh;
 	}
+	form li{
+		display:grid;
+		grid-template-columns: repeat(1, 1fr);
+		text-align: center;
+
+	}
+	form li:nth-child(even){
+		margin-bottom: 20px;
+	}
 	form{
 		display: grid;
 		grid-template-columns: repeat(1,1fr);
 		width: 45vw;
 		margin: auto;
 		padding: 30px;
+		font-size: 18px;
+	}
+	input{
+		text-align: center;
+		font-size:18px;
+		padding:10px;
+		background-color: #0002;
+		outline: none;
+		border-radius:5px;
+	}
+	input:focus{
+		background-color: #fff;
+	}
+
+	textarea{
+		text-align: center;
+		font-size:18px;
+		padding:10px;
+		margin-bottom: 20px;
+		background-color: #0002;
+		outline: none;
+		border-radius:5px;
+	}
+	textarea:focus{
+		background-color:#fff;
+	}
+
+	button{
+		width: 150px;
+		height:75px;
+		margin-right:10px;
+		position: relative ;
+		left:36vw;
+		background-color: rgba(00,145,10,.5);
+		transition: all 0.5s ease-out;
+	}
+	button:hover{
+		background-color: #33FF46;
+
 	}
 	/*End index escritorio*/
 /*----------------------------------------------------------------*/
