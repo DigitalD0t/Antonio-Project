@@ -152,7 +152,7 @@ body{
 	/*Contacto*/
 	.contact-desk{
 		display:grid;
-		grid-template-columns: repeat(3,1fr);
+		grid-template-columns: repeat(4,1fr);
 		text-align: center;
 		background-color:rgba(00,00,53,.5);
 		padding:20px;
@@ -185,8 +185,7 @@ body{
 		margin: 20px 0px 20px 0px;
 		padding:10px;
 	}
-	/*Footer*/
-	.wapp, .correo, .callus{
+	.wapp, .correo, .callus, .face{
 		grid-row:2;
 		text-align:center;
 	}
@@ -286,9 +285,10 @@ body{
 	.aviso{
 		width: 100vw;
 		height: 100vh;
-		background: linear-gradient(to top, #7f7fd5, #86a8e7, #91eae455); 
+		background: linear-gradient(to top, #7f7fd5, #86a8e7, #91eae4); 
 		position:fixed;
 		top:0px;
+		z-index: 1;
 	}
 	.fa-times{
 		position:absolute;
@@ -364,7 +364,10 @@ body{
 		font-size: 45px;
 		color:rgb(00,00,53);
 	}
-
+	.contact-desk .fa-facebook{
+		font-size: 45px;
+		color:rgb(00,00,100);
+	}
 	li{
 		margin-top:5px;
 		list-style-type: none;
