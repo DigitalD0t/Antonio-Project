@@ -185,11 +185,34 @@ body{
 		height:auto;
 		display:grid;
 		grid-template-columns:repeat(1,1fr);
+		gap: 30px;
 	}
 	#testimonios{
+		width:100%;
+		display: grid;
+		grid-template-columns: repeat(1,1fr);
+		gap: 20px;
+	}
+	.testimonio{
 		width:80%;
-		margin:auto;
-		text-align: center;
+		margin: auto;
+		padding: 20px;
+		display:grid;
+		grid-template-columns:repeat(2,1fr);
+		gap: 10px;
+		background-color: #fff8;
+		border-radius: 10px;
+		border: solid 1px #30D85E;
+	}
+	.testimonio cite:nth-child(1){
+		font-size: 18px;
+		font-weight: bold;
+	}
+	.testimonio cite:nth-child(2n){
+		text-align: right;
+	}
+	.testimonio p{
+		grid-column: 1/3;
 	}
 	legend{
 		background-color:#fff8;
@@ -322,7 +345,7 @@ body{
 	.inter img{
 		width:100%;
 	}
-	.despues img{
+	.despuesinter img{
 		width:100%;
 	}
 	.aviso{
@@ -586,8 +609,14 @@ body{
 	.testimonio{
 		width:80%;
 		margin: auto;
+		padding: 30px;
+		background-color: #fff8;
+		border-radius: 30px;
+		border: solid 1px #30D85E;
 		display:grid;
 		grid-template-columns:repeat(2,1fr);
+		gap: 10px;
+		
 	}
 	.testimonio cite:nth-child(1){
 		font-size: 18px;
