@@ -167,10 +167,11 @@
 			<h1>Visítanos</h1>
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d790.8460847219642!2d-99.18765605065485!3d19.45905177305352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f89e7acc958b%3A0xc439e0e3cf93aa2!2sIntercity%20Tacuba!5e0!3m2!1ses!2smx!4v1679165452783!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>
-		<div class="testimonios">
+		<div class="uxper">
 			<h1>Testimonios</h1>
-			  <div id="testimonio">
+			  <div id="testimonios">
 			  </div>
+			  <hr>
 			  <legend>
 				<h1>Compártenos tu experiencia</h1>
 				<form action="index.html" method="post">
@@ -248,7 +249,7 @@
 		const nombre = document.getElementById("nombre");
 		const caso = document.getElementById("caso");
 		const comentario = document.getElementById("comentario-input");
-		const testimonio = document.getElementById("testimonio")
+		const testimonios = document.getElementById("testimonios")
 			
 		const publicar = document.getElementById("submit-button");
 
@@ -259,6 +260,7 @@
 			const casso = caso.value;
 			const comment = comentario.value;
 			const nuevocomentario = document.createElement("DIV");
+			nuevocomentario.classList.add("testimonio");
 			const citeNombre = document.createElement("CITE");
 		  	const citeCaso = document.createElement("CITE");
 		  	const pComent = document.createElement("P");
@@ -271,7 +273,7 @@
 			nuevocomentario.appendChild(citeCaso);
 			nuevocomentario.appendChild(pComent);
 
-			testimonio.appendChild(nuevocomentario);
+			testimonios.appendChild(nuevocomentario);
 
 		  	nombre.value = "";
 		  	caso.value ="";
